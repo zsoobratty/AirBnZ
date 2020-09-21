@@ -1,6 +1,8 @@
 module Api
     module V1
         class SpacesController < ApplicationController
+            protect_from_forgery with: :null_session
+            
             def index
                 spaces = Space.all
 
