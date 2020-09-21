@@ -7,7 +7,7 @@ class CreateSpaces < ActiveRecord::Migration[6.0]
       t.string :img_url
       t.date :available_from
       t.date :available_to
-      t.belongs_to :users, null: false, foreign_key: true
+      t.belongs_to :user, null: false, foreign_key: true
 
       t.timestamps
     end

@@ -4,7 +4,8 @@ class CreateBookings < ActiveRecord::Migration[6.0]
       t.date :booking_date
       t.belongs_to :user, null: false, foreign_key: true
       t.belongs_to :space, null: false, foreign_key: true
-
+      t.boolean :confirmed
+      
       t.timestamps
     end
   end
