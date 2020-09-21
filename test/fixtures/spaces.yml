@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  price: 1
+  img_url: MyString
+  available_from: 2020-09-21
+  available_to: 2020-09-21
+  users: one
+
+two:
+  name: MyString
+  description: MyString
+  price: 1
+  img_url: MyString
+  available_from: 2020-09-21
+  available_to: 2020-09-21
+  users: two
