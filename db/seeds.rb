@@ -4,16 +4,16 @@
 
 # User seeds
 user_list = [
-    ['Ziad', 'ziad@example.com', 'P@$$W0RD'],
-    ['Dave', 'dave@example.com', 'P@$$W0RD123'],
-    ['Lauren', 'lauren@example.com', 'P@$$W0RD321'],
-    ['Anna', 'anna@example.com', 'P@$$W0RDabc'],
-    ['Ollie', 'ollie@example.com', 'P@$$W0RDcba']
+    ['Ziad', 'Ziad123', 'ziad@example.com', 'P@$$W0RD'],
+    ['Dave', 'Dave321', 'dave@example.com', 'P@$$W0RD123'],
+    ['Lauren', 'Lauren01', 'lauren@example.com', 'P@$$W0RD321'],
+    ['Anna', 'Anna101', 'anna@example.com', 'P@$$W0RDabc'],
+    ['Ollie', 'Oleg19' 'ollie@example.com', 'P@$$W0RDcba']
 
 ]
 
-user_list.each do | name, email, password|
-    User.create( name: name, email: email, password_digest: password )
+user_list.each do | name, username, email, password|
+    User.create( name: name, username: username, email: email, password_digest: password )
 end
 
 
