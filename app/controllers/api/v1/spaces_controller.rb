@@ -2,13 +2,13 @@ module Api
     module V1
         class SpacesController < ApplicationController
             def index
-                spaces = Space.All
+                spaces = Space.all
 
                 render json: SpaceSerializer.new(spaces).serialized_json
             end
 
             def show
-                spaces = Spaces.find_by(id: params[:id])
+                spaces = Space.find_by(id: params[:id])
 
                 render json: SpaceSerializer.new(spaces).serialized_json
             end
@@ -42,7 +42,7 @@ module Api
                     render json: { error: airline.errors.messages }, status: 422
                 end
             end
-            
+
 
             private
             
