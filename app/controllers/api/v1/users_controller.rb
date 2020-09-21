@@ -2,7 +2,7 @@ module Api
     module V1
         class UsersController < ApplicationController
             def create
-                input = User.new(params.permit(:name, :email, :password))
+                input = User.new(params.permit(:username, :email, :password))
 
                 if(input.save)
                     :ok
