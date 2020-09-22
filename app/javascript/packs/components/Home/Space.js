@@ -1,9 +1,12 @@
 import React from 'react'
 
-const Space = ({ available_from, available_to, description, img_url, name, price }) => {
+const Space = ({space}) => {
+    console.log(space)
     return (
         <div>
-            {available_from}
+            <h1>{space.id}</h1>
+            <h2>{space.attributes.name}</h2>
+            <img src={space.attributes.img_url} alt={space.attributes.description}/>
         </div>
     )
 }

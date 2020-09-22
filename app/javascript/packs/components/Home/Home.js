@@ -12,8 +12,8 @@ const Home = () => {
     useEffect(() => {
         axios.get('http://localhost:3000/api/v1/spaces')
             .then (res => {
-                console.log(res.data)
-                setSpaces(res.data)
+                console.log(res.data.data)
+                setSpaces(res.data.data)
                 setLoad(true)
             })
             .catch(err => {
@@ -22,16 +22,21 @@ const Home = () => {
             })
     }, [])
 
-
     return (
         <div>
-            <h1>Spaces</h1>
-            <h2>Here are the spaces we have available</h2>
-            { spaces.map((space) => (
-                <Space space={space}/>
-            )
-            )}
-            
+            <h1>Home</h1>
+            <h2>Here are the spaces we have available:</h2>
+
+            { load ? (
+                 <ul>
+                 { spaces.map((space) => (
+                     <Space key={space.id} space={space}/>
+                 )
+                 )}
+                 </ul>
+            ) : (
+                <h1>Loading... </h1>
+            )}   
         </div>
     )
 }
