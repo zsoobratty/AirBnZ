@@ -1,19 +1,26 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
+import { hot } from 'react-hot-loader/root'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import Home from './Home/Home'
+import NavBar from './NavBar'
+import Home from './Home'
+import Spaces from './Space/Spaces'
 import '../main.css'
 
 const App = () => {
 
     return (
-        <div>
+        <div className='App'>
             <Router>
-                <Route path='/'>
+            <NavBar/>
+                <Route exact path='/'>
                     <Home />
+                </Route>
+                <Route path='/spaces'>
+                    <Spaces />
                 </Route>
             </Router>
         </div>
     )
 }
 
-export default App
+export default hot(App)

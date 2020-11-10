@@ -24,16 +24,15 @@ const Home = () => {
 
     return (
         <div>
-            <h1>Home</h1>
+            <h1>Spaces</h1>
             <h2>Here are the spaces we have available:</h2>
 
             { load ? (
-                 <ul>
-                 { spaces.map((space) => (
-                     <Space key={space.id} space={space}/>
-                 )
-                 )}
-                 </ul>
+                <div className="Spaces-container">
+                    { spaces.map((space) => (
+                        <Space key={space.id} space={space}/>
+                    ))}
+                </div>
             ) : (
                 <h1>Loading... </h1>
             )}   
